@@ -1,0 +1,32 @@
+Map<String, dynamic> getParams(
+  String? amt,
+  String? name,
+  String? phone,
+  String? Order_id,
+  String? hash,
+) {
+  return {
+    'address_line_1': 'ad1',
+    'address_line_2': 'ad2',
+    'amount': amt ?? "",
+    'api_key': '06e478b9-6edb-48d1-ab0c-fa7c80bcf401',
+    'city': 'Malappuram',
+    'country': 'IND',
+    'currency': 'INR',
+    'description': 'CH CENTER THENNALA',
+    'email': 'support@workmateinfotech.com',
+    'mode': 'LIVE',
+    'name': name ?? 'Office',
+    'order_id': Order_id ?? "",
+    'phone': '8138010133',
+    'return_url': 'http://localhost:8888/paymentresponse',
+    'state': 'kerala',
+    'zip_code': '673635',
+    'udf1': name ?? "",
+    'udf2': phone ?? "",
+    'udf3': Order_id ?? "",
+    'udf4': "",
+    'udf5': "",
+    'hash': hash ?? '31bef9dee8d1c6b10e46a1ee43a74ca4fe1e277d',
+  };
+}
