@@ -47,40 +47,40 @@ class HistoryState extends State<Newreport> {
 
   PreferredSize get _appBar {
     return PreferredSize(
-      preferredSize: const Size.fromHeight(74),
+      preferredSize: const Size.fromHeight(90),
       child: SafeArea(
         child: Column(
           children: [
             SizedBox(height: 12),
             Row(
-              mainAxisAlignment: MainAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                // Container(
-                //   width: 25,
-                //   height: 25,
-                //   // margin: const EdgeInsets.all(8),
-                //   // decoration: ShapeDecoration(
-                //   //   color: Colors.white,
-                //   //   shape: RoundedRectangleBorder(
-                //   //     side:
-                //   //     const BorderSide(width: 1, color: Color(0xFFEDF4FC)),
-                //   //     borderRadius: BorderRadius.circular(18),
-                //   //   ),
-                //   // ),
-                //   // child: IconButton(
-                //   //   padding: const EdgeInsets.all(8),
-                //   //   constraints: const BoxConstraints(),
-                //   //   onPressed: () {
-                //   //     Get.back();
-                //   //   },
-                //   //   icon: SvgPicture.asset(
-                //   //     'assets/backarrow_s.svg',
-                //   //     width: 22,
-                //   //     height: 22,
-                //   //     semanticsLabel: 'Example SVG',
-                //   //   ),
-                //   // ),
-                // ),
+                Container(
+                  width: 45,
+                  height: 45,
+                  margin: const EdgeInsets.only(left: 20),
+                  decoration: ShapeDecoration(
+                    color: Colors.white,
+                    shape: RoundedRectangleBorder(
+                      side:
+                      const BorderSide(width: 1, color: Color(0xFFEDF4FC)),
+                      borderRadius: BorderRadius.circular(18),
+                    ),
+                  ),
+                  child: IconButton(
+                    padding: const EdgeInsets.all(8),
+                    constraints: const BoxConstraints(),
+                    onPressed: () {
+                      Get.back();
+                    },
+                    icon: SvgPicture.asset(
+                      'assets/backarrow_s.svg',
+                      width: 22,
+                      height: 22,
+                      semanticsLabel: 'Example SVG',
+                    ),
+                  ),
+                ),
                 const Center(
                   child: Text(
                     'Report',
@@ -94,31 +94,31 @@ class HistoryState extends State<Newreport> {
                     textScaleFactor: 1.0,
                   ),
                 ),
-                // Container(
-                //   width: 25,
-                //   height: 25,
-                //   // margin: const EdgeInsets.all(8),
-                //   // decoration: ShapeDecoration(
-                //   //   color: Colors.white,
-                //   //   shape: RoundedRectangleBorder(
-                //   //     side:
-                //   //     const BorderSide(width: 1, color: Color(0xFFEDF4FC)),
-                //   //     borderRadius: BorderRadius.circular(18),
-                //   //   ),
-                //   // ),
-                //   // child: IconButton(
-                //   //   padding: const EdgeInsets.all(8),
-                //   //   onPressed: () {
-                //   //     Get.back();
-                //   //   },
-                //   //   icon: SvgPicture.asset(
-                //   //     'assets/home.svg',
-                //   //     width: 18,
-                //   //     height: 20,
-                //   //     semanticsLabel: 'Example SVG',
-                //   //   ),
-                //   // ),
-                // ),
+                Container(
+                  width: 45,
+                  height: 45,
+                  margin: const EdgeInsets.only(right: 20),
+                  decoration: ShapeDecoration(
+                    color: Colors.white,
+                    shape: RoundedRectangleBorder(
+                      side:
+                      const BorderSide(width: 1, color: Color(0xFFEDF4FC)),
+                      borderRadius: BorderRadius.circular(18),
+                    ),
+                  ),
+                  child: IconButton(
+                    padding: const EdgeInsets.all(8),
+                    onPressed: () {
+                      Get.back();
+                    },
+                    icon: SvgPicture.asset(
+                      'assets/home.svg',
+                      width: 18,
+                      height: 20,
+                      semanticsLabel: 'Example SVG',
+                    ),
+                  ),
+                ),
               ],
             ),
             SizedBox(height: 8),

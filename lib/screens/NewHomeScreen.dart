@@ -111,7 +111,6 @@ class MyHomePageState extends State<MyHomePage> with RouteAware {
               bottomBarWidth: double.infinity,
               bottomBarHeight: 52.0,
 
-              /// Provide NotchBottomBarController
               notchBottomBarController: botController,
               color: AppColors.primaryColor,
               showLabel: true,
@@ -127,7 +126,7 @@ class MyHomePageState extends State<MyHomePage> with RouteAware {
                 colors: [AppColors.primaryColor2, AppColors.primaryColor],
               ),
 
-              /// restart app if you change removeMargins
+             
               removeMargins: true,
               showShadow: false,
               durationInMilliSeconds: 300,

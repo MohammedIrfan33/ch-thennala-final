@@ -1,8 +1,9 @@
 import 'package:auto_size_text/auto_size_text.dart';
-import 'package:chcenterthennala/rewardStatus/Hundered_Club.dart';
+import 'package:chcenterthennala/rewardStatus/RewardPosterWidget.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
@@ -10,8 +11,7 @@ import 'package:get/get_core/src/get_main.dart';
 import '../Utils/colors.dart';
 import '../controller/TopReportController.dart';
 import '../main.dart';
-import '../rewardStatus/ThreeHundred_Club.dart';
-import '../rewardStatus/Twohundred_Club.dart';
+
 import '../widgets/PorgressIndicator.dart';
 
 class TopReport extends StatefulWidget {
@@ -41,27 +41,29 @@ class _TopClubsState extends State<TopReport>
                   width: 53,
                   height: 53,
                   margin: const EdgeInsets.all(8),
-                  // decoration: ShapeDecoration(
-                  //   color: Colors.white,
-                  //   shape: RoundedRectangleBorder(
-                  //     side:
-                  //     const BorderSide(width: 1, color: Color(0xFFEDF4FC)),
-                  //     borderRadius: BorderRadius.circular(18),
-                  //   ),
-                  // ),
-                  // child: IconButton(
-                  //   padding: const EdgeInsets.all(8),
-                  //   constraints: const BoxConstraints(),
-                  //   onPressed: () {
-                  //     Get.back();
-                  //   },
-                  //   icon: SvgPicture.asset(
-                  //     'assets/backarrow_s.svg',
-                  //     width: 22,
-                  //     height: 22,
-                  //     semanticsLabel: 'Example SVG',
-                  //   ),
-                  // ),
+                  decoration: ShapeDecoration(
+                    color: Colors.white,
+                    shape: RoundedRectangleBorder(
+                      side: const BorderSide(
+                        width: 1,
+                        color: Color(0xFFEDF4FC),
+                      ),
+                      borderRadius: BorderRadius.circular(18),
+                    ),
+                  ),
+                  child: IconButton(
+                    padding: const EdgeInsets.all(8),
+                    constraints: const BoxConstraints(),
+                    onPressed: () {
+                      Get.back();
+                    },
+                    icon: SvgPicture.asset(
+                      'assets/backarrow_s.svg',
+                      width: 22,
+                      height: 22,
+                      semanticsLabel: 'Example SVG',
+                    ),
+                  ),
                 ),
                 const Center(
                   child: Text(
@@ -79,30 +81,35 @@ class _TopClubsState extends State<TopReport>
                 Container(
                   width: 53,
                   height: 53,
-                  margin: const EdgeInsets.all(8),
-                  // decoration: ShapeDecoration(
-                  //   color: Colors.white,
-                  //   shape: RoundedRectangleBorder(
-                  //     side:
-                  //     const BorderSide(width: 1, color: Color(0xFFEDF4FC)),
-                  //     borderRadius: BorderRadius.circular(18),
-                  //   ),
-                  // ),
-                  // child: IconButton(
-                  //   padding: const EdgeInsets.all(8),
-                  //   onPressed: () {
-                  //     Get.back();
-                  //   },
-                  //   icon: SvgPicture.asset(
-                  //     'assets/home.svg',
-                  //     width: 18,
-                  //     height: 20,
-                  //     semanticsLabel: 'Example SVG',
-                  //   ),
-                  // ),
+                  margin: const EdgeInsets.only(right: 20),
+                  decoration: ShapeDecoration(
+                    color: Colors.white,
+                    shape: RoundedRectangleBorder(
+                      side: const BorderSide(
+                        width: 1,
+                        color: Color(0xFFEDF4FC),
+                      ),
+                      borderRadius: BorderRadius.circular(18),
+                    ),
+                  ),
+                  child: IconButton(
+                    padding: const EdgeInsets.all(8),
+                    onPressed: () {
+                      Get.back();
+                    },
+                    icon: SvgPicture.asset(
+                      'assets/home.svg',
+                      width: 18,
+                      height: 20,
+                      semanticsLabel: 'Example SVG',
+                    ),
+                  ),
                 ),
               ],
             ),
+           
+           
+           
             Container(
               padding: const EdgeInsets.symmetric(horizontal: 12.0),
               child: Align(
@@ -183,63 +190,6 @@ class _TopClubsState extends State<TopReport>
                         ),
                       ),
                     ),
-
-                    Tab(
-                      child: ShaderMask(
-                        shaderCallback: (Rect bounds) {
-                          return LinearGradient(
-                            colors: [
-                              AppColors.primaryColor,
-                              AppColors.primaryColor2,
-                            ],
-                            begin: Alignment.topLeft,
-                            end: Alignment.bottomRight,
-                          ).createShader(bounds);
-                        },
-                        child: AutoSizeText(
-                          "Panchayat",
-                          style: TextStyle(
-                            fontSize: 14,
-                            fontWeight: FontWeight.w500,
-                            color: Colors
-                                .white, // Must set a color for ShaderMask to work
-                          ),
-                          maxLines: 1,
-                          minFontSize: 6,
-                          maxFontSize: 14,
-                          overflow: TextOverflow.ellipsis,
-                          textScaleFactor: 1.0,
-                        ),
-                      ),
-                    ),
-                    Tab(
-                      child: ShaderMask(
-                        shaderCallback: (Rect bounds) {
-                          return LinearGradient(
-                            colors: [
-                              AppColors.primaryColor,
-                              AppColors.primaryColor2,
-                            ],
-                            begin: Alignment.topLeft,
-                            end: Alignment.bottomRight,
-                          ).createShader(bounds);
-                        },
-                        child: AutoSizeText(
-                          "Organisation",
-                          style: TextStyle(
-                            fontSize: 14,
-                            fontWeight: FontWeight.w500,
-                            color: Colors
-                                .white, // Must set a color for ShaderMask to work
-                          ),
-                          maxLines: 1,
-                          minFontSize: 6,
-                          maxFontSize: 14,
-                          overflow: TextOverflow.ellipsis,
-                          textScaleFactor: 1.0,
-                        ),
-                      ),
-                    ),
                   ],
                 ),
               ),
@@ -253,7 +203,7 @@ class _TopClubsState extends State<TopReport>
   @override
   void initState() {
     super.initState();
-    _tabController = TabController(length: 4, vsync: this);
+    _tabController = TabController(length: 2, vsync: this);
   }
 
   @override
@@ -427,24 +377,129 @@ class _TopClubsState extends State<TopReport>
                           itemBuilder: (context, index) {
                             return InkWell(
                               onTap: () {
-                                // String value=controller.assemblylist[index].amount;
-                                // int? amount = int.tryParse(value);
-                                //
-                                // if (amount == null) return; // Handle invalid numbers safely
-                                //
-                                // StatefulWidget? page =
-                                // // (amount >= 50 && amount < 100) ? FiftyClub(name: controller.assemblylist[index].name,) :
-                                // // (amount >= 100 && amount < 150) ? HundredClub(name: controller.assemblylist[index].name,) :
-                                // // (amount >= 150 && amount < 200) ? OnefiftyClub(name: controller.assemblylist[index].name,) :
-                                // (amount >= 100 && amount < 200) ? HunderedClub(name: controller.assemblylist[index].name,name_panchayath: controller.assemblylist[index].panchayat,) :
-                                // (amount >= 200 && amount < 300) ? TwohundredClub(name: controller.assemblylist[index].name,name_panchayath: controller.assemblylist[index].panchayat,) :
-                                //
-                                // (amount >= 300) ? ThreehundredClub(name: controller.assemblylist[index].name,name_panchayath: controller.assemblylist[index].panchayat,) :
-                                // null;
-                                //
-                                // if (page != null) {
-                                //   Get.to(page);
-                                // }
+                                String value =
+                                    controller.assemblylist[index].packets;
+                                int? packets = int.tryParse(value);
+
+                                print(packets);
+
+                                if (packets == null) return;
+
+                                if (packets >= 50 && packets < 100) {
+                                  Get.to(
+                                    () => PosterShareWidget(
+                                      
+                                      imagePath: 'assets/thennala/reward/50_club.jpeg',
+                                     name: controller.assemblylist[index].name,
+                                     nameTopFactor: .35,
+                                     width: 200.w,
+                                   
+                                 
+                                
+
+
+                                      //300
+                                    
+                                    
+                              
+
+
+                                      //50
+                                      //   nameTopFactor: .35,
+                                      // nameLeftFactor: .64,
+                                     
+                                      
+                                    
+                                      
+                                     
+
+                                    ),
+                                  );
+                                }else if(packets >=100 && packets < 150){
+
+                                  Get.to(
+                                    () => PosterShareWidget(
+                                      imagePath: 'assets/thennala/reward/100_club.jpeg',
+                                      name: controller.assemblylist[index].name,
+                                      nameTopFactor: .34,
+                               
+                                     
+                                    
+                                    ),
+                                  );
+
+                                
+                                } else if (packets >= 150 && packets < 200) {
+                                  Get.to(
+                                    () => PosterShareWidget(
+                                      imagePath: 'assets/thennala/reward/150_club.jpeg',
+                                      name: controller.assemblylist[index].name,
+                                      nameTopFactor: .35,
+                                     
+                                     width: 200.w,
+                                 
+                                     
+                                    
+                                    ),
+                                  );
+                                } else if (packets >= 200 && packets < 250) {
+                                  Get.to(
+                                    () => PosterShareWidget(
+                                      imagePath: 'assets/thennala/reward/200_club.jpeg',
+                                      name: controller.assemblylist[index].name,
+                                      nameTopFactor: .35,
+                                      nameLeftFactor: .45,
+                                      nameWidthFactor: .44,
+
+                                      
+                                    ),
+                                  );
+                                }else if(packets >= 250 && packets < 300){
+
+                                  Get.to(
+                                    () => PosterShareWidget(
+                                      
+                                      imagePath: 'assets/thennala/reward/250_club.jpeg',
+                                     name: controller.assemblylist[index].name,
+                                     nameTopFactor: .35,
+                                     width: 200.w,
+                                     marginRigt: 15.w,
+
+
+                                     
+                                      
+                                     
+                                      
+                                    
+                                      
+                                     
+
+                                    ),
+                                  );
+
+
+
+                                } else if (packets >= 300 && packets < 400) {
+                                  Get.to(
+                                    () => PosterShareWidget(
+                                      imagePath: 'assets/thennala/reward/300_club.jpeg',
+                                      name: controller.assemblylist[index].name,
+                                     nameTopFactor: .33,
+                                     width: 200.w,
+                                     marginRigt: 15.w,
+
+                                      
+                                    ),
+                                  );
+                                } else if (packets >= 400) {
+                                  Get.to(
+                                    () => PosterShareWidget(
+                                      imagePath: 'assets/thennala/reward/400_club.jpeg',
+                                      name: controller.assemblylist[index].name,
+                                    
+                                    ),
+                                  );
+                                }
                               },
                               child: Padding(
                                 padding: const EdgeInsets.symmetric(
@@ -525,17 +580,39 @@ class _TopClubsState extends State<TopReport>
                                               padding: const EdgeInsets.only(
                                                 left: 4,
                                               ),
-                                              child: Text(
-                                                textAlign: TextAlign.right,
-                                                "₹ ${controller.assemblylist[index].amount.replaceAll(".00", "")}",
-                                                style: const TextStyle(
-                                                  color: Color(0xFF3A3A3A),
-                                                  fontSize: 13,
-                                                  fontFamily: 'Poppins',
-                                                  fontWeight: FontWeight.w700,
-                                                  height: 0,
-                                                ),
-                                                textScaleFactor: 1.0,
+                                              child: Column(
+                                                mainAxisAlignment:
+                                                    MainAxisAlignment.center,
+                                                mainAxisSize: MainAxisSize.min,
+                                                children: [
+                                                  Text(
+                                                    textAlign: TextAlign.right,
+                                                    "₹ ${controller.assemblylist[index].amount.replaceAll(".00", "")}",
+                                                    style: const TextStyle(
+                                                      color: Color(0xFF3A3A3A),
+                                                      fontSize: 13,
+                                                      fontFamily: 'Poppins',
+                                                      fontWeight:
+                                                          FontWeight.w700,
+                                                      height: 0,
+                                                    ),
+                                                    textScaleFactor: 1.0,
+                                                  ),
+                                                  SizedBox(height: 5,),
+                                                  Text(
+                                                    textAlign: TextAlign.right,
+                                                    "${controller.assemblylist[index].packets} Pkts",
+                                                    style: const TextStyle(
+                                                      color: Color(0xFF3A3A3A),
+                                                      fontSize: 14,
+                                                      fontFamily: 'Poppins',
+                                                      fontWeight:
+                                                          FontWeight.w900,
+                                                      height: 0,
+                                                    ),
+                                                    textScaleFactor: 1.0,
+                                                  ),
+                                                ],
                                               ),
                                             ),
                                           ),
@@ -551,242 +628,244 @@ class _TopClubsState extends State<TopReport>
                       },
                     ),
             ),
+
             ////////////third tab>>>>>>>>>>>>>>>>>>>>>>>>>>
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 24),
-              child: controller.isLoading2.value
-                  ? Center(
-                      child: Container(
-                        height: 25,
-                        width: 25,
-                        child: ProgressINdigator(),
-                      ),
-                    )
-                  : controller.panchayatlist.isEmpty
-                  ? const Center(child: Text('No entries to show'))
-                  : GetBuilder(
-                      builder: (TopreportController controller) {
-                        return ListView.builder(
-                          itemCount: controller.panchayatlist.length,
-                          itemBuilder: (context, index) {
-                            return Padding(
-                              padding: const EdgeInsets.symmetric(vertical: 6),
-                              child: Container(
-                                height: 84,
-                                decoration: ShapeDecoration(
-                                  color: AppColors.primaryColor3,
-                                  shape: RoundedRectangleBorder(
-                                    side: BorderSide(
-                                      width: 1,
-                                      color: AppColors.primaryColor,
-                                    ),
-                                    borderRadius: BorderRadius.circular(10),
-                                  ),
-                                ),
-                                child: Padding(
-                                  padding: const EdgeInsets.symmetric(
-                                    horizontal: 24,
-                                  ),
-                                  child: Container(
-                                    child: Row(
-                                      children: [
-                                        Container(
-                                          width: 41,
-                                          height: 40,
-                                          clipBehavior: Clip.antiAlias,
-                                          decoration: const BoxDecoration(),
-                                          child: Stack(
-                                            children: [
-                                              SvgPicture.asset(
-                                                "assets/images/topvolunteer.svg",
-                                              ),
-                                              Positioned(
-                                                left: 17,
-                                                right: 0,
-                                                bottom: 0,
-                                                top: 12,
-                                                child: Text(
-                                                  index < 3
-                                                      ? (index + 1).toString()
-                                                      : "",
-                                                  style: TextStyle(
-                                                    fontSize: 6,
-                                                    fontWeight: FontWeight.bold,
-                                                  ),
-                                                ),
-                                              ),
-                                            ],
-                                          ),
-                                        ),
-                                        Expanded(
-                                          flex: 4,
-                                          child: Padding(
-                                            padding: const EdgeInsets.only(
-                                              left: 6.0,
-                                            ),
-                                            child: Text(
-                                              controller
-                                                  .panchayatlist[index]
-                                                  .name,
-                                              style: const TextStyle(
-                                                color: Color(0xFF3A3A3A),
-                                                fontSize: 13,
-                                                fontFamily: 'Poppins',
-                                                fontWeight: FontWeight.w700,
-                                                height: 0,
-                                              ),
-                                              textScaleFactor: 1.0,
-                                            ),
-                                          ),
-                                        ),
-                                        Expanded(
-                                          flex: 2,
-                                          child: Padding(
-                                            padding: const EdgeInsets.only(
-                                              left: 4,
-                                            ),
-                                            child: Text(
-                                              textAlign: TextAlign.right,
-                                              '₹ ${controller.panchayatlist[index].amount.replaceAll(".00", "")}',
-                                              style: const TextStyle(
-                                                color: Color(0xFF3A3A3A),
-                                                fontSize: 13,
-                                                fontFamily: 'Poppins',
-                                                fontWeight: FontWeight.w700,
-                                                height: 0,
-                                              ),
-                                              textScaleFactor: 1.0,
-                                            ),
-                                          ),
-                                        ),
-                                      ],
-                                    ),
-                                  ),
-                                ),
-                              ),
-                            );
-                          },
-                        );
-                      },
-                    ),
-            ),
+            // Padding(
+            //   padding: const EdgeInsets.symmetric(horizontal: 24),
+            //   child: controller.isLoading2.value
+            //       ? Center(
+            //           child: Container(
+            //             height: 25,
+            //             width: 25,
+            //             child: ProgressINdigator(),
+            //           ),
+            //         )
+            //       : controller.panchayatlist.isEmpty
+            //       ? const Center(child: Text('No entries to show'))
+            //       : GetBuilder(
+            //           builder: (TopreportController controller) {
+            //             return ListView.builder(
+            //               itemCount: controller.panchayatlist.length,
+            //               itemBuilder: (context, index) {
+            //                 return Padding(
+            //                   padding: const EdgeInsets.symmetric(vertical: 6),
+            //                   child: Container(
+            //                     height: 84,
+            //                     decoration: ShapeDecoration(
+            //                       color: AppColors.primaryColor3,
+            //                       shape: RoundedRectangleBorder(
+            //                         side: BorderSide(
+            //                           width: 1,
+            //                           color: AppColors.primaryColor,
+            //                         ),
+            //                         borderRadius: BorderRadius.circular(10),
+            //                       ),
+            //                     ),
+            //                     child: Padding(
+            //                       padding: const EdgeInsets.symmetric(
+            //                         horizontal: 24,
+            //                       ),
+            //                       child: Container(
+            //                         child: Row(
+            //                           children: [
+            //                             Container(
+            //                               width: 41,
+            //                               height: 40,
+            //                               clipBehavior: Clip.antiAlias,
+            //                               decoration: const BoxDecoration(),
+            //                               child: Stack(
+            //                                 children: [
+            //                                   SvgPicture.asset(
+            //                                     "assets/images/topvolunteer.svg",
+            //                                   ),
+            //                                   Positioned(
+            //                                     left: 17,
+            //                                     right: 0,
+            //                                     bottom: 0,
+            //                                     top: 12,
+            //                                     child: Text(
+            //                                       index < 3
+            //                                           ? (index + 1).toString()
+            //                                           : "",
+            //                                       style: TextStyle(
+            //                                         fontSize: 6,
+            //                                         fontWeight: FontWeight.bold,
+            //                                       ),
+            //                                     ),
+            //                                   ),
+            //                                 ],
+            //                               ),
+            //                             ),
+            //                             Expanded(
+            //                               flex: 4,
+            //                               child: Padding(
+            //                                 padding: const EdgeInsets.only(
+            //                                   left: 6.0,
+            //                                 ),
+            //                                 child: Text(
+            //                                   controller
+            //                                       .panchayatlist[index]
+            //                                       .name,
+            //                                   style: const TextStyle(
+            //                                     color: Color(0xFF3A3A3A),
+            //                                     fontSize: 13,
+            //                                     fontFamily: 'Poppins',
+            //                                     fontWeight: FontWeight.w700,
+            //                                     height: 0,
+            //                                   ),
+            //                                   textScaleFactor: 1.0,
+            //                                 ),
+            //                               ),
+            //                             ),
+            //                             Expanded(
+            //                               flex: 2,
+            //                               child: Padding(
+            //                                 padding: const EdgeInsets.only(
+            //                                   left: 4,
+            //                                 ),
+            //                                 child: Text(
+            //                                   textAlign: TextAlign.right,
+            //                                   '₹ ${controller.panchayatlist[index].amount.replaceAll(".00", "")}',
+            //                                   style: const TextStyle(
+            //                                     color: Color(0xFF3A3A3A),
+            //                                     fontSize: 13,
+            //                                     fontFamily: 'Poppins',
+            //                                     fontWeight: FontWeight.w700,
+            //                                     height: 0,
+            //                                   ),
+            //                                   textScaleFactor: 1.0,
+            //                                 ),
+            //                               ),
+            //                             ),
+            //                           ],
+            //                         ),
+            //                       ),
+            //                     ),
+            //                   ),
+            //                 );
+            //               },
+            //             );
+            //           },
+            //         ),
+            // ),
+
             //Last Tab>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 24),
-              child: controller.isLoading3.value
-                  ? Center(
-                      child: Container(
-                        height: 25,
-                        width: 25,
-                        child: ProgressINdigator(),
-                      ),
-                    )
-                  : controller.clublist.isEmpty
-                  ? const Center(child: Text('No entries to show'))
-                  : GetBuilder(
-                      builder: (TopreportController controller) {
-                        return ListView.builder(
-                          itemCount: controller.clublist.length,
-                          itemBuilder: (context, index) {
-                            return Padding(
-                              padding: const EdgeInsets.symmetric(vertical: 6),
-                              child: Container(
-                                height: 84,
-                                decoration: ShapeDecoration(
-                                  color: AppColors.primaryColor3,
-                                  shape: RoundedRectangleBorder(
-                                    side: BorderSide(
-                                      width: 1,
-                                      color: AppColors.primaryColor,
-                                    ),
-                                    borderRadius: BorderRadius.circular(10),
-                                  ),
-                                ),
-                                child: Padding(
-                                  padding: const EdgeInsets.symmetric(
-                                    horizontal: 24,
-                                  ),
-                                  child: Container(
-                                    child: Row(
-                                      children: [
-                                        Container(
-                                          width: 41,
-                                          height: 40,
-                                          clipBehavior: Clip.antiAlias,
-                                          decoration: const BoxDecoration(),
-                                          child: Stack(
-                                            children: [
-                                              SvgPicture.asset(
-                                                "assets/images/topvolunteer.svg",
-                                              ),
-                                              Positioned(
-                                                left: 17,
-                                                right: 0,
-                                                bottom: 0,
-                                                top: 12,
-                                                child: Text(
-                                                  index < 3
-                                                      ? (index + 1).toString()
-                                                      : "",
-                                                  style: TextStyle(
-                                                    fontSize: 6,
-                                                    fontWeight: FontWeight.bold,
-                                                  ),
-                                                ),
-                                              ),
-                                            ],
-                                          ),
-                                        ),
-                                        Expanded(
-                                          flex: 4,
-                                          child: Padding(
-                                            padding: const EdgeInsets.only(
-                                              left: 6.0,
-                                            ),
-                                            child: Text(
-                                              controller.clublist[index].name,
-                                              style: const TextStyle(
-                                                color: Color(0xFF3A3A3A),
-                                                fontSize: 13,
-                                                fontFamily: 'Poppins',
-                                                fontWeight: FontWeight.w700,
-                                                height: 0,
-                                              ),
-                                              textScaleFactor: 1.0,
-                                            ),
-                                          ),
-                                        ),
-                                        Expanded(
-                                          flex: 2,
-                                          child: Padding(
-                                            padding: const EdgeInsets.only(
-                                              left: 4,
-                                            ),
-                                            child: Text(
-                                              textAlign: TextAlign.right,
-                                              '₹ ${controller.clublist[index].amount.replaceAll(".00", "")}',
-                                              style: const TextStyle(
-                                                color: Color(0xFF3A3A3A),
-                                                fontSize: 13,
-                                                fontFamily: 'Poppins',
-                                                fontWeight: FontWeight.w700,
-                                                height: 0,
-                                              ),
-                                              textScaleFactor: 1.0,
-                                            ),
-                                          ),
-                                        ),
-                                      ],
-                                    ),
-                                  ),
-                                ),
-                              ),
-                            );
-                          },
-                        );
-                      },
-                    ),
-            ),
+            // Padding(
+            //   padding: const EdgeInsets.symmetric(horizontal: 24),
+            //   child: controller.isLoading3.value
+            //       ? Center(
+            //           child: Container(
+            //             height: 25,
+            //             width: 25,
+            //             child: ProgressINdigator(),
+            //           ),
+            //         )
+            //       : controller.clublist.isEmpty
+            //       ? const Center(child: Text('No entries to show'))
+            //       : GetBuilder(
+            //           builder: (TopreportController controller) {
+            //             return ListView.builder(
+            //               itemCount: controller.clublist.length,
+            //               itemBuilder: (context, index) {
+            //                 return Padding(
+            //                   padding: const EdgeInsets.symmetric(vertical: 6),
+            //                   child: Container(
+            //                     height: 84,
+            //                     decoration: ShapeDecoration(
+            //                       color: AppColors.primaryColor3,
+            //                       shape: RoundedRectangleBorder(
+            //                         side: BorderSide(
+            //                           width: 1,
+            //                           color: AppColors.primaryColor,
+            //                         ),
+            //                         borderRadius: BorderRadius.circular(10),
+            //                       ),
+            //                     ),
+            //                     child: Padding(
+            //                       padding: const EdgeInsets.symmetric(
+            //                         horizontal: 24,
+            //                       ),
+            //                       child: Container(
+            //                         child: Row(
+            //                           children: [
+            //                             Container(
+            //                               width: 41,
+            //                               height: 40,
+            //                               clipBehavior: Clip.antiAlias,
+            //                               decoration: const BoxDecoration(),
+            //                               child: Stack(
+            //                                 children: [
+            //                                   SvgPicture.asset(
+            //                                     "assets/images/topvolunteer.svg",
+            //                                   ),
+            //                                   Positioned(
+            //                                     left: 17,
+            //                                     right: 0,
+            //                                     bottom: 0,
+            //                                     top: 12,
+            //                                     child: Text(
+            //                                       index < 3
+            //                                           ? (index + 1).toString()
+            //                                           : "",
+            //                                       style: TextStyle(
+            //                                         fontSize: 6,
+            //                                         fontWeight: FontWeight.bold,
+            //                                       ),
+            //                                     ),
+            //                                   ),
+            //                                 ],
+            //                               ),
+            //                             ),
+            //                             Expanded(
+            //                               flex: 4,
+            //                               child: Padding(
+            //                                 padding: const EdgeInsets.only(
+            //                                   left: 6.0,
+            //                                 ),
+            //                                 child: Text(
+            //                                   controller.clublist[index].name,
+            //                                   style: const TextStyle(
+            //                                     color: Color(0xFF3A3A3A),
+            //                                     fontSize: 13,
+            //                                     fontFamily: 'Poppins',
+            //                                     fontWeight: FontWeight.w700,
+            //                                     height: 0,
+            //                                   ),
+            //                                   textScaleFactor: 1.0,
+            //                                 ),
+            //                               ),
+            //                             ),
+            //                             Expanded(
+            //                               flex: 2,
+            //                               child: Padding(
+            //                                 padding: const EdgeInsets.only(
+            //                                   left: 4,
+            //                                 ),
+            //                                 child: Text(
+            //                                   textAlign: TextAlign.right,
+            //                                   '₹ ${controller.clublist[index].amount.replaceAll(".00", "")}',
+            //                                   style: const TextStyle(
+            //                                     color: Color(0xFF3A3A3A),
+            //                                     fontSize: 13,
+            //                                     fontFamily: 'Poppins',
+            //                                     fontWeight: FontWeight.w700,
+            //                                     height: 0,
+            //                                   ),
+            //                                   textScaleFactor: 1.0,
+            //                                 ),
+            //                               ),
+            //                             ),
+            //                           ],
+            //                         ),
+            //                       ),
+            //                     ),
+            //                   ),
+            //                 );
+            //               },
+            //             );
+            //           },
+            //         ),
+            // ),
           ],
         ),
       ),

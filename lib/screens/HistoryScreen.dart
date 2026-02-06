@@ -52,40 +52,41 @@ class HistoryState extends State<Historyscreen>
 
   PreferredSize get _appBar {
     return PreferredSize(
-      preferredSize: const Size.fromHeight(94),
+      preferredSize: const Size.fromHeight(130),
       child: SafeArea(
         child: Column(
           children: [
             SizedBox(height: 12),
             Row(
-              mainAxisAlignment: MainAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                // Container(
-                //   width: 25,
-                //   height: 25,
-                //   // margin: const EdgeInsets.all(8),
-                //   // decoration: ShapeDecoration(
-                //   //   color: Colors.white,
-                //   //   shape: RoundedRectangleBorder(
-                //   //     side:
-                //   //     const BorderSide(width: 1, color: Color(0xFFEDF4FC)),
-                //   //     borderRadius: BorderRadius.circular(18),
-                //   //   ),
-                //   // ),
-                //   // child: IconButton(
-                //   //   padding: const EdgeInsets.all(8),
-                //   //   constraints: const BoxConstraints(),
-                //   //   onPressed: () {
-                //   //     Get.back();
-                //   //   },
-                //   //   icon: SvgPicture.asset(
-                //   //     'assets/backarrow_s.svg',
-                //   //     width: 22,
-                //   //     height: 22,
-                //   //     semanticsLabel: 'Example SVG',
-                //   //   ),
-                //   // ),
-                // ),
+                Container(
+                  width: 50,
+                  height: 50,
+                  margin:  EdgeInsets.only(left: 20),
+                 
+                  decoration: ShapeDecoration(
+                    color: Colors.white,
+                    shape: RoundedRectangleBorder(
+                      side:
+                      const BorderSide(width: 1, color: Color(0xFFEDF4FC)),
+                      borderRadius: BorderRadius.circular(18),
+                    ),
+                  ),
+                  child: IconButton(
+                    padding: const EdgeInsets.all(8),
+                    constraints: const BoxConstraints(),
+                    onPressed: () {
+                      Get.back();
+                    },
+                    icon: SvgPicture.asset(
+                      'assets/backarrow_s.svg',
+                      width: 22,
+                      height: 22,
+                      semanticsLabel: 'Example SVG',
+                    ),
+                  ),
+                ),
                 const Center(
                   child: Text(
                     'Transactions',
@@ -99,33 +100,38 @@ class HistoryState extends State<Historyscreen>
                     textScaleFactor: 1.0,
                   ),
                 ),
-                // Container(
-                //   width: 25,
-                //   height: 25,
-                //   // margin: const EdgeInsets.all(8),
-                //   // decoration: ShapeDecoration(
-                //   //   color: Colors.white,
-                //   //   shape: RoundedRectangleBorder(
-                //   //     side:
-                //   //     const BorderSide(width: 1, color: Color(0xFFEDF4FC)),
-                //   //     borderRadius: BorderRadius.circular(18),
-                //   //   ),
-                //   // ),
-                //   // child: IconButton(
-                //   //   padding: const EdgeInsets.all(8),
-                //   //   onPressed: () {
-                //   //     Get.back();
-                //   //   },
-                //   //   icon: SvgPicture.asset(
-                //   //     'assets/home.svg',
-                //   //     width: 18,
-                //   //     height: 20,
-                //   //     semanticsLabel: 'Example SVG',
-                //   //   ),
-                //   // ),
-                // ),
+                Container(
+                  width: 50,
+                  height: 50,
+                  margin:  EdgeInsets.only(right: 20),
+                  
+                  decoration: ShapeDecoration(
+                    color: Colors.white,
+                    shape: RoundedRectangleBorder(
+                      side:
+                      const BorderSide(width: 1, color: Color(0xFFEDF4FC)),
+                      borderRadius: BorderRadius.circular(18),
+                    ),
+                  ),
+                  child: IconButton(
+                    padding: const EdgeInsets.all(8),
+                    onPressed: () {
+                      Get.back();
+                    },
+                    icon: SvgPicture.asset(
+                      'assets/home.svg',
+                      width: 18,
+                      height: 20,
+                      semanticsLabel: 'Example SVG',
+                    ),
+                  ),
+                ),
               ],
             ),
+        
+        
+        
+        
             SizedBox(height: 8),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 12.0),
@@ -176,34 +182,37 @@ class HistoryState extends State<Historyscreen>
                     ),
                   ),
 
-                  Tab(
-                    child: ShaderMask(
-                      shaderCallback: (Rect bounds) {
-                        return LinearGradient(
-                          colors: [
-                            AppColors.primaryColor,
-                            AppColors.primaryColor2,
-                          ],
-                          begin: Alignment.topLeft,
-                          end: Alignment.bottomRight,
-                        ).createShader(bounds);
-                      },
-                      child: AutoSizeText(
-                        "Contribution Report",
-                        style: TextStyle(
-                          fontSize: 14,
-                          fontWeight: FontWeight.w500,
-                          color: Colors
-                              .white, // Must set a color for ShaderMask to work
-                        ),
-                        maxLines: 1,
-                        minFontSize: 6,
-                        maxFontSize: 14,
-                        overflow: TextOverflow.ellipsis,
-                        textScaleFactor: 1.0,
-                      ),
-                    ),
-                  ),
+                  // Tab(
+                  //   child: ShaderMask(
+                  //     shaderCallback: (Rect bounds) {
+                  //       return LinearGradient(
+                  //         colors: [
+                  //           AppColors.primaryColor,
+                  //           AppColors.primaryColor2,
+                  //         ],
+                  //         begin: Alignment.topLeft,
+                  //         end: Alignment.bottomRight,
+                  //       ).createShader(bounds);
+                  //     },
+                  //     child: AutoSizeText(
+                  //       "Contribution Report",
+                  //       style: TextStyle(
+                  //         fontSize: 14,
+                  //         fontWeight: FontWeight.w500,
+                  //         color: Colors
+                  //             .white, // Must set a color for ShaderMask to work
+                  //       ),
+                  //       maxLines: 1,
+                  //       minFontSize: 6,
+                  //       maxFontSize: 14,
+                  //       overflow: TextOverflow.ellipsis,
+                  //       textScaleFactor: 1.0,
+                  //     ),
+                  //   ),
+                  // ),
+              
+              
+              
                 ],
               ),
             ),
@@ -330,9 +339,9 @@ class HistoryState extends State<Historyscreen>
                   unselectedLabelColor: const Color(0xFF3A3A3A),
                   labelColor: Colors.white,
                   dividerColor: Colors.transparent,
-                  // Set to true to allow scrolling of tabs
+                 
                   indicatorSize: TabBarIndicatorSize.tab,
-                  // Tab indicator size
+                  
                   indicatorWeight: 2.0,
                   indicator: BoxDecoration(
                     color: AppColors.primaryColor2,
@@ -1250,159 +1259,162 @@ class HistoryState extends State<Historyscreen>
                                                         const SizedBox(
                                                           height: 16,
                                                         ),
-                                                        controller
-                                                                    .challengelist[index]
-                                                                    .canchangeward ==
-                                                                0
-                                                            ? SizedBox()
-                                                            : Row(
-                                                                mainAxisAlignment:
-                                                                    MainAxisAlignment
-                                                                        .spaceBetween,
-                                                                children: [
-                                                                  Expanded(
-                                                                    flex: 2,
-                                                                    child: InkWell(
-                                                                      onTap: () {
-                                                                        showModalBottomSheet(
-                                                                          context:
-                                                                              context,
-                                                                          isScrollControlled:
-                                                                              true,
-                                                                          builder:
-                                                                              (
-                                                                                context,
-                                                                              ) => BottomSheetContent(
-                                                                                id: controller.challengelist[index].customerid,
-                                                                                panchayatid: controller.challengelist[index].panchayatid,
-                                                                                controllersub: controller,
-                                                                                GlogalIDSub: GlobalId,
-                                                                              ),
-                                                                        );
-                                                                      },
-                                                                      child: Container(
-                                                                        margin: const EdgeInsets.only(
-                                                                          left:
-                                                                              6,
-                                                                        ),
-                                                                        height:
-                                                                            28,
-                                                                        decoration: ShapeDecoration(
-                                                                          color:
-                                                                              Colors.white,
-                                                                          shape: RoundedRectangleBorder(
-                                                                            borderRadius: BorderRadius.circular(
-                                                                              10,
-                                                                            ),
-                                                                          ),
-                                                                          shadows: const [
-                                                                            BoxShadow(
-                                                                              color: Color(
-                                                                                0x3F000000,
-                                                                              ),
-                                                                              blurRadius: 4,
-                                                                              offset: Offset(
-                                                                                0,
-                                                                                4,
-                                                                              ),
-                                                                              spreadRadius: 0,
-                                                                            ),
-                                                                          ],
-                                                                        ),
-                                                                        child: const Center(
-                                                                          child: Text(
-                                                                            'Change Ward',
-                                                                            style: TextStyle(
-                                                                              color: Colors.black,
-                                                                              fontSize: 10,
-                                                                              fontFamily: 'Poppins',
-                                                                              fontWeight: FontWeight.w500,
-                                                                              height: 0,
-                                                                            ),
-                                                                            textScaleFactor:
-                                                                                1.0,
-                                                                          ),
-                                                                        ),
-                                                                      ),
-                                                                    ),
-                                                                  ),
-                                                                  // controller.challengelist[index].fullypaid ==
-                                                                  //     0
-                                                                  //     ? SizedBox()
-                                                                  //     : Expanded(
-                                                                  //   flex: 2,
-                                                                  //   child: InkWell(
-                                                                  //     onTap: () {
-                                                                  //       Get.to(
-                                                                  //           ReceiptDownload(
-                                                                  //             Amount: controller
-                                                                  //                 .challengelist[
-                                                                  //             index]
-                                                                  //                 .amount,
-                                                                  //             name: controller
-                                                                  //                 .challengelist[
-                                                                  //             index]
-                                                                  //                 .receiptname,
-                                                                  //           ));
-                                                                  //     },
-                                                                  //     child:
-                                                                  //     Container(
-                                                                  //       margin:
-                                                                  //       const EdgeInsets
-                                                                  //           .only(
-                                                                  //           left:
-                                                                  //           6),
-                                                                  //       height: 28,
-                                                                  //       decoration:
-                                                                  //       ShapeDecoration(
-                                                                  //         color: Colors
-                                                                  //             .white,
-                                                                  //         shape:
-                                                                  //         RoundedRectangleBorder(
-                                                                  //           borderRadius:
-                                                                  //           BorderRadius.circular(
-                                                                  //               10),
-                                                                  //         ),
-                                                                  //         shadows: const [
-                                                                  //           BoxShadow(
-                                                                  //             color: Color(
-                                                                  //                 0x3F000000),
-                                                                  //             blurRadius:
-                                                                  //             4,
-                                                                  //             offset: Offset(
-                                                                  //                 0,
-                                                                  //                 4),
-                                                                  //             spreadRadius:
-                                                                  //             0,
-                                                                  //           )
-                                                                  //         ],
-                                                                  //       ),
-                                                                  //       child:
-                                                                  //       const Center(
-                                                                  //         child: Text(
-                                                                  //           'Receipt',
-                                                                  //           style:
-                                                                  //           TextStyle(
-                                                                  //             color: Colors
-                                                                  //                 .black,
-                                                                  //             fontSize:
-                                                                  //             10,
-                                                                  //             fontFamily:
-                                                                  //             'Poppins',
-                                                                  //             fontWeight:
-                                                                  //             FontWeight.w500,
-                                                                  //             height:
-                                                                  //             0,
-                                                                  //           ),
-                                                                  //           textScaleFactor:
-                                                                  //           1.0,
-                                                                  //         ),
-                                                                  //       ),
-                                                                  //     ),
-                                                                  //   ),
-                                                                  // )
-                                                                ],
-                                                              ),
+                                                        // controller
+                                                        //             .challengelist[index]
+                                                        //             .canchangeward ==
+                                                        //         0
+                                                        //     ? SizedBox()
+                                                        //     : Row(
+                                                        //         mainAxisAlignment:
+                                                        //             MainAxisAlignment
+                                                        //                 .spaceBetween,
+                                                        //         children: [
+                                                        //           Expanded(
+                                                        //             flex: 2,
+                                                        //             child: InkWell(
+                                                        //               onTap: () {
+                                                        //                 showModalBottomSheet(
+                                                        //                   context:
+                                                        //                       context,
+                                                        //                   isScrollControlled:
+                                                        //                       true,
+                                                        //                   builder:
+                                                        //                       (
+                                                        //                         context,
+                                                        //                       ) => BottomSheetContent(
+                                                        //                         id: controller.challengelist[index].customerid,
+                                                        //                         panchayatid: controller.challengelist[index].panchayatid,
+                                                        //                         controllersub: controller,
+                                                        //                         GlogalIDSub: GlobalId,
+                                                        //                       ),
+                                                        //                 );
+                                                        //               },
+                                                        //               child: Container(
+                                                        //                 margin: const EdgeInsets.only(
+                                                        //                   left:
+                                                        //                       6,
+                                                        //                 ),
+                                                        //                 height:
+                                                        //                     28,
+                                                        //                 decoration: ShapeDecoration(
+                                                        //                   color:
+                                                        //                       Colors.white,
+                                                        //                   shape: RoundedRectangleBorder(
+                                                        //                     borderRadius: BorderRadius.circular(
+                                                        //                       10,
+                                                        //                     ),
+                                                        //                   ),
+                                                        //                   shadows: const [
+                                                        //                     BoxShadow(
+                                                        //                       color: Color(
+                                                        //                         0x3F000000,
+                                                        //                       ),
+                                                        //                       blurRadius: 4,
+                                                        //                       offset: Offset(
+                                                        //                         0,
+                                                        //                         4,
+                                                        //                       ),
+                                                        //                       spreadRadius: 0,
+                                                        //                     ),
+                                                        //                   ],
+                                                        //                 ),
+                                                        //                 child: const Center(
+                                                        //                   child: Text(
+                                                        //                     'Change Ward',
+                                                        //                     style: TextStyle(
+                                                        //                       color: Colors.black,
+                                                        //                       fontSize: 10,
+                                                        //                       fontFamily: 'Poppins',
+                                                        //                       fontWeight: FontWeight.w500,
+                                                        //                       height: 0,
+                                                        //                     ),
+                                                        //                     textScaleFactor:
+                                                        //                         1.0,
+                                                        //                   ),
+                                                        //                 ),
+                                                        //               ),
+                                                        //             ),
+                                                        //           ),
+                                                        //           // controller.challengelist[index].fullypaid ==
+                                                        //           //     0
+                                                        //           //     ? SizedBox()
+                                                        //           //     : Expanded(
+                                                        //           //   flex: 2,
+                                                        //           //   child: InkWell(
+                                                        //           //     onTap: () {
+                                                        //           //       Get.to(
+                                                        //           //           ReceiptDownload(
+                                                        //           //             Amount: controller
+                                                        //           //                 .challengelist[
+                                                        //           //             index]
+                                                        //           //                 .amount,
+                                                        //           //             name: controller
+                                                        //           //                 .challengelist[
+                                                        //           //             index]
+                                                        //           //                 .receiptname,
+                                                        //           //           ));
+                                                        //           //     },
+                                                        //           //     child:
+                                                        //           //     Container(
+                                                        //           //       margin:
+                                                        //           //       const EdgeInsets
+                                                        //           //           .only(
+                                                        //           //           left:
+                                                        //           //           6),
+                                                        //           //       height: 28,
+                                                        //           //       decoration:
+                                                        //           //       ShapeDecoration(
+                                                        //           //         color: Colors
+                                                        //           //             .white,
+                                                        //           //         shape:
+                                                        //           //         RoundedRectangleBorder(
+                                                        //           //           borderRadius:
+                                                        //           //           BorderRadius.circular(
+                                                        //           //               10),
+                                                        //           //         ),
+                                                        //           //         shadows: const [
+                                                        //           //           BoxShadow(
+                                                        //           //             color: Color(
+                                                        //           //                 0x3F000000),
+                                                        //           //             blurRadius:
+                                                        //           //             4,
+                                                        //           //             offset: Offset(
+                                                        //           //                 0,
+                                                        //           //                 4),
+                                                        //           //             spreadRadius:
+                                                        //           //             0,
+                                                        //           //           )
+                                                        //           //         ],
+                                                        //           //       ),
+                                                        //           //       child:
+                                                        //           //       const Center(
+                                                        //           //         child: Text(
+                                                        //           //           'Receipt',
+                                                        //           //           style:
+                                                        //           //           TextStyle(
+                                                        //           //             color: Colors
+                                                        //           //                 .black,
+                                                        //           //             fontSize:
+                                                        //           //             10,
+                                                        //           //             fontFamily:
+                                                        //           //             'Poppins',
+                                                        //           //             fontWeight:
+                                                        //           //             FontWeight.w500,
+                                                        //           //             height:
+                                                        //           //             0,
+                                                        //           //           ),
+                                                        //           //           textScaleFactor:
+                                                        //           //           1.0,
+                                                        //           //         ),
+                                                        //           //       ),
+                                                        //           //     ),
+                                                        //           //   ),
+                                                        //           // )
+                                                        //         ],
+                                                        //       ),
+                                                     
+                                                     
+                                                     
                                                       ],
                                                     ),
                                                   ),
@@ -1480,788 +1492,8 @@ class HistoryState extends State<Historyscreen>
             ],
           ),
 
-          ///contribution report ///
-          SingleChildScrollView(
-            child: Padding(
-              padding: EdgeInsets.symmetric(horizontal: 20),
-              child: Column(
-                children: [
-                  SizedBox(height: 4),
-                  Visibility(
-                    visible: false,
-                    child: Column(
-                      children: [
-                        Padding(
-                          padding: EdgeInsets.symmetric(horizontal: 0),
-                          child: Column(
-                            children: [
-                              CompositedTransformTarget(
-                                link: layerLinkdrict_D,
-                                child: Container(
-                                  height: 50,
-                                  width: double.infinity,
-                                  child: TextField(
-                                    controller: searchdistrictController_D,
-                                    focusNode: searchdrictFocusNode_D,
-                                            decoration: InputDecoration(
-                                              enabledBorder:
-                                                  const OutlineInputBorder(
-                                                    borderSide: BorderSide(
-                                                      color: Color(0xffE0EDFF),
-                                                      width: 1,
-                                                    ),
-                                                    borderRadius:
-                                                        BorderRadius.all(
-                                                          Radius.circular(12),
-                                                        ),
-                                                  ),
-                                              focusedBorder:
-                                                  const OutlineInputBorder(
-                                                    borderSide: BorderSide(
-                                                      color: AppColors
-                                                          .primaryColor2,
-                                                      width: 1,
-                                                    ),
-                                                    borderRadius:
-                                                        BorderRadius.all(
-                                                          Radius.circular(12),
-                                                        ),
-                                                  ),
-
-                                              border: OutlineInputBorder(
-                                                borderRadius:
-                                                    BorderRadius.circular(25),
-                                              ),
-                                              fillColor: Colors.transparent,
-                                              filled: true,
-                                              hintStyle: const TextStyle(
-                                                color: Color(0xFF757575),
-                                                fontFamily: "Fontsemibold",
-                                                fontSize: 14,
-                                              ),
-                                              hintText: "Select District",
-
-                                      suffixIcon:
-                                          searchdistrictController_D
-                                              .text
-                                              .isNotEmpty
-                                          ? IconButton(
-                                              icon: Icon(
-                                                Icons.clear,
-                                                size: 16,
-                                              ),
-                                              onPressed: () {
-                                                setState(() {
-                                                  clearTheDatas_D(
-                                                    whichToclear
-                                                        .district,
-                                                  );
-                                                });
-                                              },
-                                            )
-                                          : null,
-                                    ),
-
-                                    textInputAction: TextInputAction
-                                        .done, // ✅ Shows the tick button on the keyboard
-                                    onSubmitted: (value) {
-                                      // ✅ Called when tick (✔) is pressed
-
-                                      ondoneTheDatas_D(
-                                        whichToclear.district,
-                                        value,
-                                      );
-                                    },
-                                    onChanged: (value) {
-                                      filterSearchdrict_D(
-                                        searchdistrictController_D.text,
-                                      );
-                                    },
-                                  ),
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
-                        SizedBox(height: 8),
-
-                        Padding(
-                          padding: const EdgeInsets.symmetric(
-                            horizontal: 0,
-                          ),
-                          child: Column(
-                            children: [
-                              CompositedTransformTarget(
-                                link: layerLinkassembly_D,
-                                child: Container(
-                                  height: 50,
-                                  child: TextField(
-                                    controller: searchassemblyController_D,
-                                    focusNode: searchassemblyFocusNode_D,
-
-                                            decoration: InputDecoration(
-                                              enabledBorder:
-                                                  const OutlineInputBorder(
-                                                    borderSide: BorderSide(
-                                                      color: Color(0xffE0EDFF),
-                                                      width: 1,
-                                                    ),
-                                                    borderRadius:
-                                                        BorderRadius.all(
-                                                          Radius.circular(12),
-                                                        ),
-                                                  ),
-                                              focusedBorder:
-                                                  const OutlineInputBorder(
-                                                    borderSide: BorderSide(
-                                                      color: AppColors
-                                                          .primaryColor2,
-                                                      width: 1,
-                                                    ),
-                                                    borderRadius:
-                                                        BorderRadius.all(
-                                                          Radius.circular(12),
-                                                        ),
-                                                  ),
-                                              hintText: "Select Assembly",
-                                              border: OutlineInputBorder(
-                                                borderRadius:
-                                                    BorderRadius.circular(25),
-                                              ),
-                                              fillColor: Colors.transparent,
-                                              filled: true,
-                                              hintStyle: const TextStyle(
-                                                color: Color(0xFF757575),
-                                                fontFamily: "Fontsemibold",
-                                                fontSize: 14,
-                                              ),
-
-                                      suffixIcon:
-                                          searchassemblyController_D
-                                              .text
-                                              .isNotEmpty
-                                          ? IconButton(
-                                              icon: Icon(
-                                                Icons.clear,
-                                                size: 16,
-                                              ),
-                                              onPressed: () {
-                                                setState(() {
-                                                  clearTheDatas_D(
-                                                    whichToclear
-                                                        .assembly,
-                                                  );
-                                                });
-                                              },
-                                            )
-                                          : null,
-                                    ),
-                                    textInputAction: TextInputAction
-                                        .done, // ✅ Shows the tick button on the keyboard
-                                    onSubmitted: (value) {
-                                      // ✅ Called when tick (✔) is pressed
-
-                                      ondoneTheDatas_D(
-                                        whichToclear.assembly,
-                                        value,
-                                      );
-                                    },
-                                    onChanged: (value) {
-                                      filterSearchassembly_D(
-                                        searchassemblyController_D.text,
-                                      );
-                                    },
-                                  ),
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
-                        SizedBox(height: 8),
-                      ],
-                    ),
-                  ),
-
-                  Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 0),
-                    child: Column(
-                      children: [
-                        CompositedTransformTarget(
-                          link: layerLinkpanchayat_D,
-                          child: Container(
-                            height: 50,
-                            child: TextField(
-                              controller: searchpanchayatController_D,
-                              focusNode: searchpanchayatFocusNode_D,
-                                      decoration: InputDecoration(
-                                        hintText: "Select Panchayat/Mun./Corp.",
-                                        enabledBorder: const OutlineInputBorder(
-                                          borderSide: BorderSide(
-                                            color: Color(0xffE0EDFF),
-                                            width: 1,
-                                          ),
-                                          borderRadius: BorderRadius.all(
-                                            Radius.circular(12),
-                                          ),
-                                        ),
-                                        focusedBorder: const OutlineInputBorder(
-                                          borderSide: BorderSide(
-                                            color: AppColors.primaryColor2,
-                                            width: 1,
-                                          ),
-                                          borderRadius: BorderRadius.all(
-                                            Radius.circular(12),
-                                          ),
-                                        ),
-                                        border: OutlineInputBorder(
-                                          borderRadius: BorderRadius.circular(
-                                            25,
-                                          ),
-                                        ),
-                                        fillColor: Colors.transparent,
-                                        filled: true,
-                                        hintStyle: const TextStyle(
-                                          color: Color(0xFF757575),
-                                          fontFamily: "Fontsemibold",
-                                          fontSize: 14,
-                                        ),
-                                suffixIcon:
-                                    searchpanchayatController_D.text.isNotEmpty
-                                    ? IconButton(
-                                        icon: Icon(Icons.clear, size: 16),
-                                        onPressed: () {
-                                          setState(() {
-                                            clearTheDatas_D(
-                                              whichToclear.panchayt,
-                                            );
-                                          });
-                                        },
-                                      )
-                                    : null,
-                              ),
-                              textInputAction: TextInputAction
-                                  .done, // ✅ Shows the tick button on the keyboard
-                              onSubmitted: (value) {
-                                // ✅ Called when tick (✔) is pressed
-
-                                ondoneTheDatas_D(whichToclear.panchayt, value);
-                              },
-                              onChanged: (value) {
-                                filterSearchpanchayat_D(
-                                  searchpanchayatController_D.text,
-                                );
-                              },
-                            ),
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                  SizedBox(height: 8),
-
-                  Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 0),
-                    child: Column(
-                      children: [
-                        CompositedTransformTarget(
-                          link: layerLinkward_D,
-                          child: Container(
-                            height: 50,
-                            child: TextField(
-                              controller: searchwardController_D,
-                              focusNode: searchwardFocusNode_D,
-                                      decoration: InputDecoration(
-                                        hintText: "Select Ward",
-                                        enabledBorder: const OutlineInputBorder(
-                                          borderSide: BorderSide(
-                                            color: Color(0xffE0EDFF),
-                                            width: 1,
-                                          ),
-                                          borderRadius: BorderRadius.all(
-                                            Radius.circular(12),
-                                          ),
-                                        ),
-                                        focusedBorder: const OutlineInputBorder(
-                                          borderSide: BorderSide(
-                                            color: AppColors.primaryColor2,
-                                            width: 1,
-                                          ),
-                                          borderRadius: BorderRadius.all(
-                                            Radius.circular(12),
-                                          ),
-                                        ),
-                                        border: OutlineInputBorder(
-                                          borderRadius: BorderRadius.circular(
-                                            25,
-                                          ),
-                                        ),
-                                        fillColor: Colors.transparent,
-                                        filled: true,
-                                        hintStyle: const TextStyle(
-                                          color: Color(0xFF757575),
-                                          fontFamily: "Fontsemibold",
-                                          fontSize: 14,
-                                        ),
-                                suffixIcon:
-                                    searchwardController_D.text.isNotEmpty
-                                    ? IconButton(
-                                        icon: Icon(Icons.clear, size: 16),
-
-                                        onPressed: () {
-                                          setState(() {
-                                            clearTheDatas_D(whichToclear.ward);
-                                          });
-                                        },
-                                      )
-                                    : null,
-                              ),
-                              textInputAction: TextInputAction
-                                  .done, // ✅ Shows the tick button on the keyboard
-                              onSubmitted: (value) {
-                                // ✅ Called when tick (✔) is pressed
-
-                                ondoneTheDatas_D(whichToclear.ward, value);
-                              },
-                              onChanged: (value) {
-                                filterSearchward_D(searchwardController_D.text);
-                              },
-                            ),
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-
-                  SizedBox(height: 12),
-
-                  Stack(
-                    children: [
-                      Positioned(
-                        child: SvgPicture.asset(
-                          height: 86,
-
-                          'assets/dashbord/firstbg.svg', // Path to your SVG
-                          fit: BoxFit.fill,
-                        ),
-                      ),
-                      Container(
-                        height: 86,
-
-                        child: Padding(
-                          padding: const EdgeInsets.symmetric(horizontal: 20),
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              Text(
-                                'Total Amount\n Collected',
-                                style: TextStyle(
-                                  color: Colors.white,
-                                  fontSize: 15,
-                                  fontFamily: 'Fontsemibold',
-                                  fontWeight: FontWeight.w600,
-                                  height: 0,
-                                  letterSpacing: 1.05,
-                                ),
-                                textScaleFactor: 1.0,
-                              ),
-                              Obx(() {
-                                return AutoSizeText(
-                                  style: const TextStyle(
-                                    color: Colors.white,
-                                    fontFamily: 'Fmedium',
-                                    fontSize: 20,
-                                    fontWeight: FontWeight.w700,
-                                    height: 0,
-                                  ),
-                                  maxLines: 1,
-                                  minFontSize: 08,
-                                  maxFontSize: 20,
-                                  overflow: TextOverflow.ellipsis,
-                                  textScaleFactor: 1.0,
-                                  " ₹ ${controller.totalPrice3.toString()}",
-                                );
-                              }),
-                            ],
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
-                  SizedBox(height: 10),
-                  Obx(() {
-                    if (controller.isLoading_Condribution.value) {
-                      return ProgressINdigator();
-                    } else if (controller.contributionList.isEmpty) {
-                      return const Center(child: Text('No entries to show'));
-                    } else {
-                      return GetBuilder(
-                        builder: (ChallengeHistroyController controller) {
-                          return Column(
-                            children: [
-                              ConstrainedBox(
-                                constraints: BoxConstraints(
-                                  maxHeight: 400, // Set the height for ListView
-                                ),
-                                child: ListView.builder(
-                                  shrinkWrap: true,
-                                  physics: BouncingScrollPhysics(),
-                                  itemCount: controller.contributionList.length,
-                                  itemBuilder: (context, index) {
-                                    return Container(
-                                      margin: EdgeInsets.only(bottom: 10),
-
-                                      decoration: ShapeDecoration(
-                                        color: AppColors.primaryColor3,
-                                        shape: RoundedRectangleBorder(
-                                          side: BorderSide(
-                                            width: 1,
-                                            color: AppColors.primaryColor,
-                                          ),
-                                          borderRadius: BorderRadius.circular(
-                                            10,
-                                          ),
-                                        ),
-                                      ),
-                                      child: Padding(
-                                        padding: const EdgeInsets.all(0.0),
-                                        child: Row(
-                                          children: [
-                                            Expanded(
-                                              flex: 4,
-                                              child: Padding(
-                                                padding: const EdgeInsets.all(
-                                                  12.0,
-                                                ),
-                                                child: Column(
-                                                  children: [
-                                                    const SizedBox(height: 12),
-                                                    Row(
-                                                      children: [
-                                                        const Text(
-                                                          'Name   :',
-                                                          style: TextStyle(
-                                                            color: Color(
-                                                              0xFF3A3A3A,
-                                                            ),
-                                                            fontSize: 14,
-                                                            fontFamily:
-                                                                'Fontsemibold',
-                                                            fontWeight:
-                                                                FontWeight.w700,
-                                                            height: 0,
-                                                          ),
-                                                          textScaleFactor: 1.0,
-                                                        ),
-                                                        Text(
-                                                          controller
-                                                              .contributionList[index]
-                                                              .name,
-                                                          style: const TextStyle(
-                                                            color: Color(
-                                                              0xFF3A3A3A,
-                                                            ),
-                                                            fontSize: 14,
-                                                            fontFamily:
-                                                                'Fontsemibold',
-                                                            fontWeight:
-                                                                FontWeight.w700,
-                                                            height: 0,
-                                                          ),
-                                                          textScaleFactor: 1.0,
-                                                        ),
-                                                      ],
-                                                    ),
-                                                    Row(
-                                                      mainAxisAlignment:
-                                                          MainAxisAlignment
-                                                              .spaceBetween,
-                                                      children: [
-                                                        Column(
-                                                          crossAxisAlignment:
-                                                              CrossAxisAlignment
-                                                                  .start,
-                                                          children: [
-                                                            const SizedBox(
-                                                              height: 4,
-                                                            ),
-                                                            Row(
-                                                              children: [
-                                                                const Text(
-                                                                  'District : ',
-                                                                  style: TextStyle(
-                                                                    color: Color(
-                                                                      0xFF3A3A3A,
-                                                                    ),
-                                                                    fontSize:
-                                                                        12,
-                                                                    fontFamily:
-                                                                        'Fontsemibold',
-                                                                    fontWeight:
-                                                                        FontWeight
-                                                                            .w500,
-                                                                    height: 0,
-                                                                  ),
-                                                                  textScaleFactor:
-                                                                      1.0,
-                                                                ),
-                                                                Text(
-                                                                  controller
-                                                                      .contributionList[index]
-                                                                      .district,
-                                                                  style: const TextStyle(
-                                                                    color: Color(
-                                                                      0xFF3A3A3A,
-                                                                    ),
-                                                                    fontSize:
-                                                                        12,
-                                                                    fontFamily:
-                                                                        'Fontsemibold',
-                                                                    fontWeight:
-                                                                        FontWeight
-                                                                            .w500,
-                                                                    height: 0,
-                                                                  ),
-                                                                  textScaleFactor:
-                                                                      1.0,
-                                                                ),
-                                                              ],
-                                                            ),
-                                                            const SizedBox(
-                                                              height: 4,
-                                                            ),
-                                                            Row(
-                                                              children: [
-                                                                const Text(
-                                                                  textAlign:
-                                                                      TextAlign
-                                                                          .left,
-                                                                  'Assembly : ',
-                                                                  style: TextStyle(
-                                                                    color: Color(
-                                                                      0xFF3A3A3A,
-                                                                    ),
-                                                                    fontSize:
-                                                                        12,
-                                                                    fontFamily:
-                                                                        'Fontsemibold',
-                                                                    fontWeight:
-                                                                        FontWeight
-                                                                            .w500,
-                                                                    height: 0,
-                                                                  ),
-                                                                  textScaleFactor:
-                                                                      1.0,
-                                                                ),
-                                                                Text(
-                                                                  controller
-                                                                      .contributionList[index]
-                                                                      .assembly,
-                                                                  style: const TextStyle(
-                                                                    color: Color(
-                                                                      0xFF3A3A3A,
-                                                                    ),
-                                                                    fontSize:
-                                                                        12,
-                                                                    fontFamily:
-                                                                        'Fontsemibold',
-                                                                    fontWeight:
-                                                                        FontWeight
-                                                                            .w500,
-                                                                    height: 0,
-                                                                  ),
-                                                                  textScaleFactor:
-                                                                      1.0,
-                                                                ),
-                                                              ],
-                                                            ),
-                                                            const SizedBox(
-                                                              height: 4,
-                                                            ),
-                                                            Row(
-                                                              children: [
-                                                                const Text(
-                                                                  'Panchayath : ',
-                                                                  style: TextStyle(
-                                                                    color: Color(
-                                                                      0xFF3A3A3A,
-                                                                    ),
-                                                                    fontSize:
-                                                                        12,
-                                                                    fontFamily:
-                                                                        'Fontsemibold',
-                                                                    fontWeight:
-                                                                        FontWeight
-                                                                            .w500,
-                                                                    height: 0,
-                                                                  ),
-                                                                  textScaleFactor:
-                                                                      1.0,
-                                                                ),
-                                                                Text(
-                                                                  controller
-                                                                      .contributionList[index]
-                                                                      .panchayat,
-                                                                  style: const TextStyle(
-                                                                    color: Color(
-                                                                      0xFF3A3A3A,
-                                                                    ),
-                                                                    fontSize:
-                                                                        12,
-                                                                    fontFamily:
-                                                                        'Fontsemibold',
-                                                                    fontWeight:
-                                                                        FontWeight
-                                                                            .w500,
-                                                                    height: 0,
-                                                                  ),
-                                                                  textScaleFactor:
-                                                                      1.0,
-                                                                ),
-                                                              ],
-                                                            ),
-                                                            const SizedBox(
-                                                              height: 4,
-                                                            ),
-                                                            Row(
-                                                              children: [
-                                                                const Text(
-                                                                  textAlign:
-                                                                      TextAlign
-                                                                          .left,
-                                                                  'Ward   :  ',
-                                                                  style: TextStyle(
-                                                                    color: Color(
-                                                                      0xFF3A3A3A,
-                                                                    ),
-                                                                    fontSize:
-                                                                        12,
-                                                                    fontFamily:
-                                                                        'Fontsemibold',
-                                                                    fontWeight:
-                                                                        FontWeight
-                                                                            .w500,
-                                                                    height: 0,
-                                                                  ),
-                                                                  textScaleFactor:
-                                                                      1.0,
-                                                                ),
-                                                                Text(
-                                                                  controller
-                                                                      .contributionList[index]
-                                                                      .ward,
-                                                                  style: const TextStyle(
-                                                                    color: Color(
-                                                                      0xFF3A3A3A,
-                                                                    ),
-                                                                    fontSize:
-                                                                        12,
-                                                                    fontFamily:
-                                                                        'Fontsemibold',
-                                                                    fontWeight:
-                                                                        FontWeight
-                                                                            .w500,
-                                                                    height: 0,
-                                                                  ),
-                                                                  textScaleFactor:
-                                                                      1.0,
-                                                                ),
-                                                              ],
-                                                            ),
-                                                            const SizedBox(
-                                                              height: 4,
-                                                            ),
-                                                            Row(
-                                                              children: [
-                                                                const Text(
-                                                                  textAlign:
-                                                                      TextAlign
-                                                                          .left,
-                                                                  'Date & time :  ',
-                                                                  style: TextStyle(
-                                                                    color: Color(
-                                                                      0xFF3A3A3A,
-                                                                    ),
-                                                                    fontSize:
-                                                                        12,
-                                                                    fontFamily:
-                                                                        'Fontsemibold',
-                                                                    fontWeight:
-                                                                        FontWeight
-                                                                            .w500,
-                                                                    height: 0,
-                                                                  ),
-                                                                  textScaleFactor:
-                                                                      1.0,
-                                                                ),
-                                                                Text(
-                                                                  controller
-                                                                      .contributionList[index]
-                                                                      .date,
-                                                                  style: const TextStyle(
-                                                                    color: Color(
-                                                                      0xFF3A3A3A,
-                                                                    ),
-                                                                    fontSize:
-                                                                        12,
-                                                                    fontFamily:
-                                                                        'Fontsemibold',
-                                                                    fontWeight:
-                                                                        FontWeight
-                                                                            .w500,
-                                                                    height: 0,
-                                                                  ),
-                                                                  textScaleFactor:
-                                                                      1.0,
-                                                                ),
-                                                              ],
-                                                            ),
-                                                          ],
-                                                        ),
-                                                        Column(
-                                                          children: [
-                                                            Text(
-                                                              " ₹${controller.contributionList[index].amount.replaceAll(".00", "")}",
-                                                              style: const TextStyle(
-                                                                color: Color(
-                                                                  0xFF3A3A3A,
-                                                                ),
-                                                                fontSize: 18,
-                                                                fontFamily:
-                                                                    'Fontsemibold',
-                                                                fontWeight:
-                                                                    FontWeight
-                                                                        .w700,
-                                                                height: 0,
-                                                              ),
-                                                              textScaleFactor:
-                                                                  1.0,
-                                                            ),
-                                                          ],
-                                                        ),
-                                                      ],
-                                                    ),
-                                                    const SizedBox(height: 16),
-                                                  ],
-                                                ),
-                                              ),
-                                            ),
-                                          ],
-                                        ),
-                                      ),
-                                    );
-                                  },
-                                ),
-                              ),
-                            ],
-                          );
-                        },
-                      );
-                    }
-                  }),
-                ],
-              ),
-            ),
-          ),
+      
+       
         ],
       ),
     );

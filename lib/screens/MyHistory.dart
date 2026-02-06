@@ -46,26 +46,26 @@ class _HistoryState extends State<Myhistory> with RouteAware {
                   width: 53,
                   height: 53,
                   margin: const EdgeInsets.all(8),
-                  // decoration: ShapeDecoration(
-                  //   color: Colors.white,
-                  //   shape: RoundedRectangleBorder(
-                  //     side: BorderSide(width: 1, color: Color(0xFFEDF4FC)),
-                  //     borderRadius: BorderRadius.circular(18),
-                  //   ),
-                  // ),
-                  // child: IconButton(
-                  //   padding: const EdgeInsets.all(8),
-                  //   constraints: const BoxConstraints(),
-                  //   onPressed: () {
-                  //     Get.back();
-                  //   },
-                  //   icon: SvgPicture.asset(
-                  //     'assets/backarrow_s.svg',
-                  //     width: 22,
-                  //     height: 22,
-                  //     semanticsLabel: 'Example SVG',
-                  //   ),
-                  // ),
+                  decoration: ShapeDecoration(
+                    color: Colors.white,
+                    shape: RoundedRectangleBorder(
+                      side: BorderSide(width: 1, color: Color(0xFFEDF4FC)),
+                      borderRadius: BorderRadius.circular(18),
+                    ),
+                  ),
+                  child: IconButton(
+                    padding: const EdgeInsets.all(8),
+                    constraints: const BoxConstraints(),
+                    onPressed: () {
+                      Get.back();
+                    },
+                    icon: SvgPicture.asset(
+                      'assets/backarrow_s.svg',
+                      width: 22,
+                      height: 22,
+                      semanticsLabel: 'Example SVG',
+                    ),
+                  ),
                 ),
                 const Center(
                   child: Text(
@@ -84,26 +84,26 @@ class _HistoryState extends State<Myhistory> with RouteAware {
                   width: 53,
                   height: 53,
                   margin: const EdgeInsets.all(8),
-                  // decoration: ShapeDecoration(
-                  //   color: Colors.white,
-                  //   shape: RoundedRectangleBorder(
-                  //     side:
-                  //     const BorderSide(width: 1, color: Color(0xFFEDF4FC)),
-                  //     borderRadius: BorderRadius.circular(18),
-                  //   ),
-                  // ),
-                  // child: IconButton(
-                  //   padding: const EdgeInsets.all(8),
-                  //   onPressed: () {
-                  //     Get.back();
-                  //   },
-                  //   icon: SvgPicture.asset(
-                  //     'assets/home.svg',
-                  //     width: 18,
-                  //     height: 20,
-                  //     semanticsLabel: 'Example SVG',
-                  //   ),
-                  // ),
+                  decoration: ShapeDecoration(
+                    color: Colors.white,
+                    shape: RoundedRectangleBorder(
+                      side:
+                      const BorderSide(width: 1, color: Color(0xFFEDF4FC)),
+                      borderRadius: BorderRadius.circular(18),
+                    ),
+                  ),
+                  child: IconButton(
+                    padding: const EdgeInsets.all(8),
+                    onPressed: () {
+                      Get.back();
+                    },
+                    icon: SvgPicture.asset(
+                      'assets/home.svg',
+                      width: 18,
+                      height: 20,
+                      semanticsLabel: 'Example SVG',
+                    ),
+                  ),
                 ),
               ],
             ),
@@ -620,7 +620,7 @@ class _HistoryState extends State<Myhistory> with RouteAware {
                                                   child: Container(
                                                     padding:
                                                         const EdgeInsets.symmetric(
-                                                          vertical: 8,
+                                                          vertical: 15,
                                                         ),
 
                                                     decoration: ShapeDecoration(
@@ -648,7 +648,7 @@ class _HistoryState extends State<Myhistory> with RouteAware {
                                                         'Receipt',
                                                         style: TextStyle(
                                                           color: Colors.white,
-                                                          fontSize: 10,
+                                                          fontSize: 14,
                                                           fontFamily: 'Poppins',
                                                           fontWeight:
                                                               FontWeight.w500,
@@ -679,7 +679,7 @@ class _HistoryState extends State<Myhistory> with RouteAware {
                                                         child: Container(
                                                           padding:
                                                               const EdgeInsets.symmetric(
-                                                                vertical: 8,
+                                                                vertical: 15,
                                                               ),
 
                                                           decoration: ShapeDecoration(
@@ -711,7 +711,7 @@ class _HistoryState extends State<Myhistory> with RouteAware {
                                                               style: TextStyle(
                                                                 color: Colors
                                                                     .white,
-                                                                fontSize: 10,
+                                                                fontSize: 14,
                                                                 fontFamily:
                                                                     'Poppins',
                                                                 fontWeight:

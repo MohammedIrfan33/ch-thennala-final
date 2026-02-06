@@ -25,8 +25,6 @@ class ReceiptDownload extends StatefulWidget {
 }
 
 class _ReceiptDownloadState extends State<ReceiptDownload> {
-  
-
   PreferredSize get _appBar {
     return PreferredSize(
       preferredSize: const Size.fromHeight(90),
@@ -141,23 +139,30 @@ class _ReceiptDownloadState extends State<ReceiptDownload> {
                   ),
                   Positioned(
                     left: 105, // Adjust as per your template
-                    top: 111, // Adjust as per your template
+                    top: 115, // Adjust as per your template
                     child: Container(
                       width: 220,
 
                       child: AutoSizeText(
-                        "${widget.name}",
+                        widget.name,
                         style: TextStyle(
-                          color: Colors.black,
-                          fontSize: 12,
+                          color: Colors.white,
+                          fontSize: 11,
                           fontFamily: 'Fmedium',
                           fontWeight: FontWeight.w600,
-                          height: 0,
+                          height: 1.0, // keep text readable (0 can clip)
+                          shadows: const [
+                            Shadow(
+                              offset: Offset(0.5, 0.5),
+                              blurRadius: 1.2,
+                              color: Colors.black26,
+                            ),
+                          ],
                         ),
                         textScaleFactor: 1.0,
                         maxLines: 2,
                         minFontSize: 4,
-                        maxFontSize: 12,
+                        maxFontSize: 15,
                         overflow: TextOverflow.ellipsis,
                       ),
                     ),
@@ -173,16 +178,13 @@ class _ReceiptDownloadState extends State<ReceiptDownload> {
                 alignment: Alignment.center,
                 child: InkWell(
                   onTap: () {
-                    capturePng(
-                      pathName: 'receipt',
-                      context: context,
-                    );
+                    capturePng(pathName: 'receipt', context: context);
                   },
                   child: Container(
                     width: MediaQuery.sizeOf(context).width - 60,
-                    height: 41,
+                    height: 50,
                     decoration: ShapeDecoration(
-                      color: AppColors.primaryColor2,
+                      color: AppColors.primaryColor,
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(20),
                       ),
@@ -194,9 +196,9 @@ class _ReceiptDownloadState extends State<ReceiptDownload> {
                           'Share',
                           style: TextStyle(
                             color: Colors.white,
-                            fontSize: 15,
+                            fontSize: 16,
                             fontFamily: 'Poppins',
-                            fontWeight: FontWeight.w400,
+                            fontWeight: FontWeight.w600,
                             height: 0,
                           ),
                           textScaleFactor: 1.0,

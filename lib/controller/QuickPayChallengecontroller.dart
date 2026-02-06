@@ -599,12 +599,12 @@ class QuickpayChallagecontroller extends GetxController {
       'Amount': Amount,
       'Received': received,
       'volunteer': AppData.volunteerId == null ? "0" : volunteerid,
-      'qty': list.first.quantity.toString(),
-      'qty1': list[1].quantity.toString(),
+      'qty': list.length !=0 ?  list.first.quantity.toString() : "0",
+      'qty1': list.length >1  ?  list[1].quantity.toString() : "0",
       'mode': "1",
     };
 
-    print("Json data ${jsonEncode(fullBodySave)}");
+ 
 
     final response = await post(Uri.parse(setthefulldatas), body: fullBodySave);
     isLoading(false);

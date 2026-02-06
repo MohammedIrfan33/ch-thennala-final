@@ -4,7 +4,6 @@ import 'package:get/get.dart';
 import 'package:http/http.dart' as http;
 import 'package:chcenterthennala/modles/TopreportAssemblyModel.dart';
 import 'package:chcenterthennala/modles/TopreportPanchatModel.dart';
-import 'package:chcenterthennala/modles/TopreportWardModel.dart';
 
 import '../ApiLists/Apis.dart';
 import '../modles/TopClubModel.dart';
@@ -29,6 +28,7 @@ class TopreportController extends GetxController {
     try {
       isLoading1(true);
       var _result = await fetchConstituency();
+
       assemblylist.assignAll(_result);
       //isChecked.value = List<bool>.generate(filteredProducts.length, (index) => false);
     } finally {
@@ -38,8 +38,11 @@ class TopreportController extends GetxController {
 
   Future<List<TopReportassemblyModel>> fetchConstituency() async {
     final response = await http.get(Uri.parse(TopWard));
+
+    print(response.body);
     if (response.statusCode == 200) {
       Map<String, dynamic> parsedJson = jsonDecode(response.body);
+
 
       // Check the status
       if (parsedJson['Status'] == 'true') {

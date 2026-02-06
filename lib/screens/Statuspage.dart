@@ -165,14 +165,19 @@ class _StatusScreenState extends State<StatusScreen> {
                 children: [
                   if (imagefile != null)
                     Positioned(
-                      right: 47, // Adjust as per circle position on the placeholder
-                      top: 80, // Adjust as per circle position on the placeholder
+                      right:
+                          47, // Adjust as per circle position on the placeholder
+                      top:
+                          80, // Adjust as per circle position on the placeholder
                       child: Container(
                         height: 120,
                         width: 120,
                         decoration: BoxDecoration(
                           shape: BoxShape.circle,
-                          border: Border.all(color: Colors.transparent, width: 0),
+                          border: Border.all(
+                            color: Colors.transparent,
+                            width: 0,
+                          ),
                         ),
                         child: ClipOval(
                           child: Image(
@@ -198,30 +203,40 @@ class _StatusScreenState extends State<StatusScreen> {
                     // Photo is at right: 47, top: 80, size: 120x120
                     // Photo center horizontally: (340 - 47 - 60) = 233 from left
                     // Name width: 150, so left position: 233 - 75 = 158
-                    left: (355 - 47 - 60) - 75, // Center below photo horizontally
-                    top: 80 + 128 , // Below the photo: photo top (80) + photo height (120) + spacing (10)
+                    left:
+                        (355 - 47 - 60) - 75, // Center below photo horizontally
+                    top:
+                        80 +
+                        128, // Below the photo: photo top (80) + photo height (120) + spacing (10)
                     child: Container(
-                      height: 50, // Increased height to accommodate 2 lines
+                      height: 52, // Increased height to accommodate 2 lines
                       width: 120,
                       child: Align(
                         alignment: Alignment.center,
                         child: AutoSizeText(
-                          textAlign: TextAlign.center,
                           widget.name,
+                          textAlign: TextAlign.center,
                           style: TextStyle(
                             wordSpacing: -1,
                             color: Colors.white,
-                            fontSize: 12,
+                            fontSize: 13,
                             fontFamily: 'Poppins',
-                            fontWeight: FontWeight.w400,
+                            fontWeight: FontWeight.w500,
                             fontStyle: FontStyle.italic,
-                            height: 1.2, // Changed from 0 to allow proper line spacing
+                            height: 1.2,
+                            shadows: const [
+                              Shadow(
+                                offset: Offset(0.5, 0.5), // very small shift
+                                blurRadius: 1.5, // soft blur
+                                color: Colors.black26, // light shadow
+                              ),
+                            ],
                           ),
                           textScaleFactor: 1.0,
                           maxLines: 2,
-                          minFontSize: 8,
-                          maxFontSize: 18,
-                          overflow: TextOverflow.visible, // Changed to visible to allow wrapping
+                          minFontSize: 12,
+                          maxFontSize: 20,
+                          overflow: TextOverflow.visible,
                         ),
                       ),
                     ),
@@ -239,10 +254,10 @@ class _StatusScreenState extends State<StatusScreen> {
                     child: InkWell(
                       onTap: () => pickImage(),
                       child: Container(
-                        height: 41,
+                        height: 50,
 
                         decoration: ShapeDecoration(
-                          color: AppColors.primaryColor2,
+                          color: AppColors.primaryColor,
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(20),
                           ),
@@ -262,7 +277,7 @@ class _StatusScreenState extends State<StatusScreen> {
                                 color: Colors.white,
                                 fontSize: 15,
                                 fontFamily: 'Poppins',
-                                fontWeight: FontWeight.w400,
+                                fontWeight: FontWeight.w600,
                                 height: 0,
                               ),
                               textScaleFactor: 1.0,
@@ -276,15 +291,12 @@ class _StatusScreenState extends State<StatusScreen> {
                   Expanded(
                     child: InkWell(
                       onTap: () {
-                        capturePng(
-                          pathName: 'status_image',
-                          context: context,
-                        );
+                        capturePng(pathName: 'status_image', context: context);
                       },
                       child: Container(
-                        height: 41,
+                        height: 50,
                         decoration: ShapeDecoration(
-                          color: AppColors.primaryColor2,
+                          color: AppColors.primaryColor,
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(20),
                           ),
@@ -304,7 +316,7 @@ class _StatusScreenState extends State<StatusScreen> {
                                 color: Colors.white,
                                 fontSize: 15,
                                 fontFamily: 'Poppins',
-                                fontWeight: FontWeight.w400,
+                                fontWeight: FontWeight.w600,
                                 height: 0,
                               ),
                               textScaleFactor: 1.0,
