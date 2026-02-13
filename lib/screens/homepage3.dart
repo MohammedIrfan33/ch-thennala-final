@@ -1,5 +1,6 @@
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:carousel_slider/carousel_slider.dart';
+import 'package:chcenterthennala/Appcore/close_challenge_check.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
@@ -1155,6 +1156,7 @@ class _Homepage3State extends State<Homepage3> with RouteAware {
                 spacing: 24,
                 children: [
                   if (AppData.hide != "1")
+                    closeChallenge != '1'?
                     GestureDetector(
                       onTap: () {
                         Get.to(
@@ -1179,7 +1181,7 @@ class _Homepage3State extends State<Homepage3> with RouteAware {
                           children: [Image.asset('assets/home3/gold.png')],
                         ),
                       ),
-                    ),
+                    ) : SizedBox(),
                   Container(
                     height: padingBottom,
                     decoration: BoxDecoration(
@@ -1192,6 +1194,8 @@ class _Homepage3State extends State<Homepage3> with RouteAware {
                   ),
                 ],
               ),
+           
+           
             ],
           ),
         );
