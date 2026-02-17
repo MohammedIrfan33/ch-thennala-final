@@ -299,7 +299,7 @@ class _Homepage3State extends State<Homepage3> with RouteAware {
 
                             //
                             if (AppData.hide != "1")
-                              Column(
+                             closeChallenge != '1' ? Column(
                                 spacing: 14,
                                 children: [
                                   Row(
@@ -369,7 +369,7 @@ class _Homepage3State extends State<Homepage3> with RouteAware {
                                     ),
                                   ),
                                 ],
-                              ),
+                              ):SizedBox.shrink(),
                             SizedBox(
                               height: 240,
                               child: Container(
